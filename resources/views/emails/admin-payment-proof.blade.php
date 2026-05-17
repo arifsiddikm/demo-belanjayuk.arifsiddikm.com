@@ -1,0 +1,5 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>body{font-family:'Segoe UI',sans-serif;background:#fffbeb;margin:0;padding:20px}.c{max-width:560px;margin:0 auto;background:#fff;border-radius:16px;overflow:hidden}.h{background:linear-gradient(135deg,#d97706,#f59e0b);padding:24px;text-align:center;color:#fff}.b{padding:28px}.btn{display:inline-block;background:#f59e0b;color:#fff;text-decoration:none;padding:12px 24px;border-radius:10px;font-weight:600;margin-top:16px}</style></head>
+<body><div class="c"><div class="h"><p style="font-size:20px;font-weight:800;margin:0">⚠️ Konfirmasi Pembayaran</p></div>
+<div class="b"><p>Ada bukti transfer untuk pesanan <strong style="font-family:monospace">{{ $order->order_number }}</strong> dari <strong>{{ $order->user->name }}</strong>.</p>
+<p>Total: <strong style="color:#16a34a">Rp {{ number_format($order->total,0,',','.') }}</strong></p>
+<a href="{{ url('/webmin/pesanan/konfirmasi-bayar') }}" class="btn">Lihat & Konfirmasi →</a></div></div></body></html>
